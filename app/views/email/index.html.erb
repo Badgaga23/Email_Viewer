@@ -1,0 +1,15 @@
+<div class='container'>
+	<div class= "row">
+		<div class= 'col'>
+			<ul class="email-list">
+				<% @emails.each do | email | %>
+				<a href='#' class=' content- <%=email.id %>'><li><%= email.object %></li></a>
+                <% end %>
+			</ul>
+            <%= link_to "Email", emails_path, class: "btn btn-success", :method => "POST", remote: true %>
+		</div>
+		<div class='col'>
+		
+		</div>
+	</div>
+</div>
